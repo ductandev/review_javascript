@@ -1,9 +1,0 @@
-{
-    "scripts": {
-    "dev": "npx nodemon",
-    "start": "npx tsx 05_HOF_injection.ts"
-  },
-  "devDependencies": {
-    "tsx": "^4.21.0"
-  }
-}
