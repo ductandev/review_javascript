@@ -12,7 +12,8 @@
     "baseUrl": ".", // Đường dẫn base cho các import
     "paths": {
       "~/*": ["src/*"] // Đường dẫn tương đối cho các import (alias)
-    }
+    },
+    "experimentalDecorators": true
   },
   "include": ["src/**/*"] // Đường dẫn include cho các file cần build
 }

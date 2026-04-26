@@ -33,8 +33,8 @@ errorWithTime_0('Error 3!')
 
 // ✅ Dependency Injection: Là một design pattern trong lập trình hướng đối tượng. Giúp tăng tính tái sử dụng code, giảm trùng lặp và dễ dàng testing
 // ==============================================================================
-
 class TimeLogger {
+  //logFn: được gọi là dependence, được inject vào qua constructor
   constructor(private logFn: (message: string) => void) { }
 
   log(message: string) {
@@ -48,6 +48,9 @@ const warnWithTime = new TimeLogger(console.warn)
 
 const errorWithTime = new TimeLogger(console.error)
 
+// Chúng ta inject console.log vào TimeLogger thông qua constructor
 logWithTime.log('Hello world')
+// Chúng ta inject console.warn vào TimeLogger thông qua constructor
 warnWithTime.log('Warning 2!')
+// Chúng ta inject console.error vào TimeLogger thông qua constructor
 errorWithTime.log('Error 3!')
