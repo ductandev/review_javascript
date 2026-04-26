@@ -41,7 +41,7 @@ console.log(camry)
 
 // Tạo class máy cắt cỏ
 class LawnMower extends Engine {
-  brandLawnMower = 'Noname'
+  brandLawnMower = 'Noname'   // Khai báo thuộc tính
   constructor(engineName, brandLawnMower) {
     super(engineName)
     // Gán giá trị
