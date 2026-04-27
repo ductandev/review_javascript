@@ -1,4 +1,13 @@
+class EngineOld {
+  private engineName: string
+  constructor(engineName: string) {
+    this.engineName = engineName
+  }
 
+  startEngine() {
+    console.log(`Engine ${this.engineName} is starting...`)
+  }
+}
 interface IEngine {
   engineName: string
   startEngine(): void
