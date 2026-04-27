@@ -1,31 +1,27 @@
 class Animal {
   constructor(name) {
-    this.name = name; // public
+    this.name = name;
   }
 
-  speak() {
-    console.log(`${this.name} makes a sound`);
+  getSpkeak() {
+    console.log(`${this.name} is spkeaking`)
   }
 }
 
 class Dog extends Animal {
   constructor(name, breed) {
-    super(name);
-    this._breed = breed; // "protected-like" (JS không có protected thật)
+    super(name)
+    this.breed = breed;
   }
 
-  // 🔰	Đóng gói - encapsulation (getter)
-  get breed() {
-    return this._breed;
-  }
-
-  // 🔰	Đa hình - polymorphism (override)
   speak() {
-    console.log(`${this.name} barks`);
+    console.log(`${this.name} make a sound`)
+  }
+  getSpkeak() {
+    console.log(`${this.name} is override`)
   }
 }
 
-// sử dụng
-const dog = new Dog("Buddy", "Husky");
-dog.speak();        // Buddy barks
-console.log(dog.breed); // Husky
+const dog = new Dog("Bông", "Mèo")
+dog.speak();
+dog.getSpkeak();
